@@ -79,7 +79,7 @@
             //      sucess and error events respectively.
             executor.executeAsync(
                 {
-                    url: appweburl + "/_api/SP.AppContextSite(@target)/web/lists/getbytitle('Posts')/items?@target='" + hostweburl + "/blog'&$top=1",
+                    url: appweburl + "/_api/SP.AppContextSite(@target)/web/lists/getbytitle('Posts')/items?@target='" + hostweburl + "/blog'&$top=1&$orderby=PublishedDate%20desc",
                     method: "GET",
                     headers: { "Accept": "application/json; odata=verbose" },
                     success: successHandler,
